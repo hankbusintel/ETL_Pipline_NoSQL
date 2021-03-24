@@ -9,8 +9,8 @@ class getDenomCSV():
         
     def __getFileList(self):
         """
-            Create a for loop to create a list of files and collect each filepath
-            join the file path and roots with the subdirectories using glob
+        Create a for loop to create a list of files and collect each filepath
+        join the file path and roots with the subdirectories using glob
         """
         import os
         import glob
@@ -22,8 +22,8 @@ class getDenomCSV():
         
     def __makeFulldataList(self):
         """
-            initiating an empty list of rows that will be generated from each file
-            extracting each data row one by one and append it to a list.   
+        initiating an empty list of rows that will be generated from each file
+        extracting each data row one by one and append it to a list.
         """
         import csv
        

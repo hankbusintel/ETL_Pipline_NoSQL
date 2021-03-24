@@ -27,6 +27,7 @@ def create_keyspace():
 def drop_tables(session):
     """
     Drops each table using the queries in `drop_table_queries` list.
+    :param session: cassandra session
     """
     for query in drop_table_queries:
         session.execute(query)
@@ -35,7 +36,8 @@ def drop_tables(session):
 
 def create_tables(session):
     """
-    Creates each table using the queries in `create_table_queries` list. 
+    Creates each table using the queries in `create_table_queries` list.
+    :param session: cassandra session
     """
     for query in create_table_queries:
         session.execute(query)

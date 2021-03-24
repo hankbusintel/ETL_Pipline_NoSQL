@@ -7,7 +7,8 @@ from cassandra.cluster import Cluster
 def connect_keyspace(dbName):
     """
     - Creates and connects to the sparkify database in Apache Cassandra
-    - Returns the connection and cursor to sparkify
+    :param dbName:Database name
+    :return: the connection and cursor to sparkify
     """
     cluster = Cluster(['127.0.0.1'])
     session = cluster.connect() 
@@ -18,7 +19,8 @@ def connect_keyspace(dbName):
 
 def process_csv(session):
     """
-        Read the csv file, load data into three tables in cassandra.
+    Read the csv file, load data into three tables in cassandra.
+    :param session: Carssendra session
     """
     import csv
     file = 'event_datafile_new.csv'
@@ -34,8 +36,8 @@ def process_csv(session):
 
 def main():
     """
-        get full csv file event_datafile_new.csv to /home/workspace folder.
-        Load data to the tables.
+    get full csv file event_datafile_new.csv to /home/workspace folder.
+    Load data to the tables.
     """
     
     gfcsv.main()
